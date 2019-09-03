@@ -1,30 +1,30 @@
 # Reflected_SQL_injection
-Objectif:
-  - Devenir administrateur
+Goal:
+  - Become an administrator
   
-Étapes:
-  - Exploiter une XSS
-  - Exploiter une SQLi Reflected
-  - Accéder au panel admin de manière à récupérer le mot de passe de validation
+Steps:
+  - Exploit an XSS
+  - Exploit an SQLi Reflected
+  - Getting an access to the admin panel to retrieve the validation password
 
-# Utile
-Je vous recommande les liens suivants avant de vous attaquer au challenge:
+# Usefull
+I recommend the following links before starting the challenge:
   - https://portswigger.net/kb/issues/00200331_client-side-sql-injection-reflected-dom-based
   - https://sql.sh/
   - https://www.owasp.org/index.php/SQL_Injection
 
 # Configuration
-Étapes nécessaires afin de configurer le challenge correctement:
-  - Veillez à bien changer les credentials de votre base de donnée présent de le fichier config/db.php
-  - Importez la base de donnée challenge.sql sur votre SGDB.
-  - Créer un système de bot (faisable via tâche CRON) qui visite le fichier bot/log.html toutes les minutes. 
-  - Le challenge est libre de droit, réutilisable et modifiable. N'hésitez pas à me faire parvenir vos modifications.
+Necessary steps to configure the challenge correctly:
+  - Be sure to change the credentials of your current database in the `config/db.php` file
+  - Import `challenge.sql` into your favorite DBMS.
+  - Create a bot system (with PhantomJS or something else) that visits the `bot/log.html` file every minute. 
+  - The challenge is free of rights, reusable and modifiable. Feel free to send me your updates.
 
-# Architecture de la BDD
-Cette information est à divulguée d'une manière ou d'une autre (fichier index.php.bak ?) c'est pourquoi je la divulgue ici:
-  - La base de donnée est consitutée d'une table "users"
-  - La table "users" est constituée de 4 colonnes : "username", "password", "admin", "views"
-  - Lors de l'inscription, la valeur 0 est assigné à la colonne "admin"
+# DB architecture
+This information needs to be divulged in a way (index.php.bak?), that's why I give it here:
+  - The database contains a table `users`
+  - The `users` table contains 4 columns: `username`, `password`, `admin` and `views` 
+  - When registering, 0 is assigned to the `admin` column
 
 # Creds
-Le front-end utilisé provient du site https://root-me.org (que je recommande).
+The front-end used comes from the site https://root-me.org (which I recommend).
